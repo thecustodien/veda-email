@@ -2,7 +2,16 @@ import yagmail
 import time
 import random
 
+import streamlit as st
+
 import pandas as pd
+
+st.set_page_config(
+    page_title= 'VEDA Email',
+    page_icon= '🙂',
+)
+
+st.title('VEDA Email')
 
 yag = yagmail.SMTP('thecustodien@gmail.com', 'Awesom3o')
 
@@ -18,5 +27,5 @@ for recipient in recipients:
     sec = random.randrange(1, 60)
     time.sleep(sec)
   except:
-    print(f'Not sent to {recipient}')
+    st.write(f'Not sent to {recipient}')
     notSent.append(recipient)
