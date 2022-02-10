@@ -24,6 +24,7 @@ notSent = []
 for recipient in recipients:
   try:
     yag.send(to = recipient.lower() + '@cb.students.amrita.edu', subject = 'Meet VEDA', contents = message)
+    st.write(f'Sent to {recipient}')
     sec = random.randrange(1, 60)
     time.sleep(sec)
   except:
