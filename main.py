@@ -13,7 +13,7 @@ st.set_page_config(
 
 st.title('VEDA Email')
 
-yag = yagmail.SMTP('thecustodien@gmail.com', 'Awesom3o')
+yag = yagmail.SMTP('thecustodien@gmail.com', 'Awesom3o', 'smtp.gmail.com')
 
 recipients = pd.read_csv('./cb.csv')['email'].tolist()
 
